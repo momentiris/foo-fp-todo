@@ -11,8 +11,8 @@ const database = () => {
 
   const getAll = <T>(key: string): Promise<T> => {
     // eslint-disable-next-line no-constant-condition
-    if (false) {
-      return Promise.reject(createDatabaseError('asdf'));
+    if (Math.random() > 0.1) {
+      return Promise.reject('bad');
     }
 
     return Promise.resolve(d.get(key) || []);
